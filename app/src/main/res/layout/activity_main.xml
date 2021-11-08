@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:id="@+id/TopLLO"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/TopLeft"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_margin="8dp"
+            android:layout_weight="1"
+            android:textSize="48sp"/>
+
+        <Button
+            android:id="@+id/TopCenter"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_margin="8dp"
+            android:layout_weight="1"
+            android:textSize="48sp"/>
+
+        <Button
+            android:id="@+id/TopRight"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_margin="8dp"
+            android:layout_weight="1"
+            android:textSize="48sp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/MiddelLeft"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_margin="8dp"
+            android:layout_weight="1"
+            android:textSize="48sp"/>
+
+        <Button
+            android:id="@+id/MiddelCenter"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_margin="8dp"
+            android:layout_weight="1"
+            android:textSize="48sp"/>
+
+        <Button
+            android:id="@+id/MiddelRight"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_margin="8dp"
+            android:layout_weight="1"
+            android:textSize="48sp"/>
+
+    </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/BottomLeft"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_margin="8dp"
+                android:layout_weight="1"
+                android:textSize="48sp"/>
+
+            <Button
+                android:id="@+id/BottomCenter"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_margin="8dp"
+                android:layout_weight="1"
+                android:textSize="48sp"/>
+
+            <Button
+                android:id="@+id/BottomRight"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_margin="8dp"
+                android:layout_weight="1"
+                android:textSize="48sp"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/WinnerTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/TopLLO"
+        app:layout_constraintBottom_toTopOf="@id/BottomLLO"
+        android:text="Player Wins!"
+        android:textSize="24dp"
+        android:visibility="gone"
+        android:gravity="center"/>
+
+    <TextView
+        android:id="@+id/QTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/BottomLLO"
+        android:text="Play Again?"
+        android:textSize="20dp"
+        android:visibility="gone"
+        android:gravity="center"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/BottomLLO"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:layout_weight="1"
+            android:id="@+id/Player1">
+
+            <TextView
+                android:id="@+id/Player1TV"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:padding="16dp"
+                android:text="Player 1"/>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:layout_weight="1"
+            android:id="@+id/Player2">
+
+            <TextView
+                android:id="@+id/Player2TV"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:padding="16dp"
+                android:text="Player 2"/>
+
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
